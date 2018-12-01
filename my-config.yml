@@ -1,0 +1,63 @@
+###############################################################################
+# Configuration file to scaffold a Shiny app.
+#
+# TODO: Add a bit more information to this header
+###############################################################################
+
+## General ####################################################################
+
+# Author will appear in the header of each generated file
+author: Doug Hunt
+
+# Title of the application
+title: Historic Map of Bus Locations
+
+# Directory in which the app will be installed (relative to current directory)
+app-directory: app
+
+
+## Style ######################################################################
+
+# Set generic template to use for the app. Run list_app_templates() to list
+# available app templates. Valid app tempates are:
+# - shinydashboard
+# - navbarpage
+app-template: shinydashboard
+
+style:
+  # set default state of the side menu (only used for template shinydashboard)
+  side-bar-collapsed: TRUE
+
+  # collapse side menu when a menu item is clicked, useful if app is used on
+  # small screens (only used for template shinydashboard)
+  make-side-bar-collapsed: TRUE
+
+  # set the skin of the dashboard, valid values are "blue", "black", "purple",
+  # "green", "red", "yellow" (only used for template shinydashboard)
+  dashboard-skin: blue
+
+  # set a max width for the content (looks nicer on larger screens)
+  restrict-max-width: FALSE
+
+
+## Modules ####################################################################
+
+# A Shiny module allows logical separation of functionality. Each page (tab) in
+# the scaffolded app is assumed to be implemented in its own module. A module
+# has the following attributes:
+# - id: Identifier used in the generated R code to identify the module
+# - name: Name of the module to be shown in the menubar
+# - icon: Icon to be shown in the menubar. Must be a valid FontAwesome name or
+#   a Glyphicon. Checkout http://fontawesome.io/icons/ and
+#   http://getbootstrap.com/components/#glyphicons for valid icon identifiers.
+# - template: Template to use for scaffolding module. Run list_mod_templates()
+#   to list available module templates.
+modules:
+  - id: bus_map
+    name: Bus Map
+    icon: home
+    template: blankpage
+  - id: help
+    name: Help
+    icon: question
+    template: blankpage
